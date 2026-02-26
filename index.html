@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ATOZ UPSCALE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #7B2FF7, #A4508B);
+      color: white;
+      padding: 40px 20px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 40px;
+    }
+    .tagline {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 12px 25px;
+      background: #7B2FF7;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    section {
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ATOZ UPSCALE</h1>
+  <div class="tagline">Give One Chance To Us – We Turn Pixels Into Perfection.</div>
+  <a class="btn" href="pricing.html">View Pricing</a>
+</header>
+
+<section>
+  <h2>AI Image Upscaling</h2>
+  <p>Enhance your photos to 2K, 4K, 8K and 10K resolution using advanced AI technology.</p>
+
+  <input type="file" id="imageInput">
+  <br><br>
+  <button onclick="uploadImage()" class="btn">Upscale Image</button>
+
+  <p id="status"></p>
+</section>
+
+<script>
+async function uploadImage() {
+  const fileInput = document.getElementById("imageInput");
+  const status = document.getElementById("status");
+
+  if (!fileInput.files.length) {
+    alert("Please select an image.");
+    return;
+  }
+
+  status.innerText = "Processing... Please wait.";
+
+  // This will connect later to backend
+  status.innerText = "AI processing will be connected in next step.";
+}
+</script>
+
+</body>
+</html>
